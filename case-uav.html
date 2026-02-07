@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <title>UAV</title>
+    <link rel="stylesheet" href="css/fonts.css">
+    <link rel="stylesheet" href="css/globals.css">
+    <link rel="stylesheet" href="css/case.css">
+    <link rel="shortcut icon" href="img/favicon.png" type="image/png">
+    <meta property="og:image" content="img/image.png">
+    <meta name="description" content="Полнофункциональное веб-приложение для управления турнирами по беспилотным летательным аппаратам (БПЛА)">
+    <meta property="og:description" content="Полнофункциональное веб-приложение для управления турнирами по беспилотным летательным аппаратам (БПЛА)">
+    <meta property="og:title" content="UAV Tournament Management System"/>
+    <meta property="og:type" content="website"/>
+    <meta property="og:site_name" content="UAV Tournament Management System"/>
+    <meta property="og:url" content="https://tokar.org">
+    <meta name="twitter:card" content="summary_large_image"/>
+</head>
+<body>
+<div class="enter-animated"></div>
+<header class="case-header">
+    <div class="case-header__container">
+        <p class="p-main --p-low --ellipsis" id="name-text">Кирилл Токар</p>
+        <a href="index.html" class="back-link">
+            <p class="p-main --p-low --ellipsis uav-case-title">UAV Tournament Management System</p>
+            <img src="img/icons/cross.svg" alt="" class="cross">
+        </a>
+    </div>
+    <div class="contacts-container">
+        <div class="contacts-item oppener">
+            <p class="p-main --p-low">ktokar06@mail.ru</p>
+            <svg class="plus-minus-icon" xmlns="http://www.w3.org/2000/svg" width="8" height="19" viewBox="0 0 8 19" fill="none">
+                <style>
+                    .plus-minus-icon .line-vertical, .plus-minus-icon .line-horizontal {
+                        transition: all 0.3s ease;
+                        transform-origin: center;
+                    }
+
+                    .plus-minus-icon.active .line-vertical {
+                        transform: scaleY(0);
+                    }
+
+                    .plus-minus-icon.active .line-horizontal {
+                        transform: scaleX(1);
+                    }
+                </style>
+
+                <rect class="line-horizontal" x="0.191895" y="10.0675" width="7.61599" height="1.248" fill="white" />
+                <rect class="line-vertical" x="3.37589" y="6.88379" width="1.248" height="7.616" fill="white" />
+            </svg>
+        </div>
+        <div class="showing-box">
+            <a href="https://t.me/zegwaer" target="_blank" class="p-main --p-low contacts-item animated-link --copy">Telegram</a>
+            <a href="https://vk.com/zegwaer" target="_blank" class="p-main --p-low contacts-item animated-link --copy">VK</a>
+            <a href="https://github.com/ktokar06" target="_blank" class="p-main --p-low contacts-item animated-link --copy">GitHub</a>
+        </div>
+    </div>
+    <div class="header-main__actions">
+        <a href="resume.pdf" class="button animated-link">
+            <p class="p-main --p-low" id="resume-text">Резюме</p>
+            <img src="img/icons/arrow.svg" alt="">
+        </a>
+        <div class="change-lang-container">
+            <div class="animated-link js-ru">
+                <p class="p-main --p-low js-ru-text">EN</p>
+            </div>
+        </div>
+    </div>
+</header>
+<section class="about-case">
+    <div class="about-case__container">
+            <span class="p-main --p-title-big case-title">
+                <span class="uav-title">UAV</span>
+                <p class="--p-secondary uav-secondary">Tournament Management System</p>
+            </span>
+    </div>
+    <div class="about-case__container first-box">
+        <div class="about-case__info-box info-box--1">
+            <p class="p-main --p-low --p-secondary aboutProject-text">О проекте</p>
+            <p class="p-main --p-low uav-about">Полнофункциональное веб-приложение для управления турнирами по беспилотным летательным аппаратам (БПЛА). Система для организации, проведения и архивации результатов соревнований.</p>
+        </div>
+        <div class="about-case__info-box info-box--2">
+            <p class="p-main --p-low --p-secondary task-text">Задача</p>
+            <p class="p-main --p-low uav-task">Разработать веб-приложение для автоматизации процесса организации и проведения турниров по БПЛА. Система должна упростить регистрацию участников, ведение турнирных таблиц, подсчет результатов и архивацию данных.</p>
+        </div>
+        <div class="about-case__info-box info-box--3">
+            <p class="p-main --p-low --p-secondary timelineText-text">Таймлайн</p>
+            <div class="about-case__info-box --small-gap">
+                <p class="p-main --p-low uav-timeline-period">Ноябрь 2025 - Декабрь 2025</p>
+                <p class="p-main --p-low --p-secondary uav-timeline-duration">2 недели</p>
+            </div>
+        </div>
+    </div>
+    <div class="about-case__container second-box">
+        <div class="about-case__info-box info-box--4">
+            <p class="p-main --p-low --p-secondary results-text">Результаты</p>
+            <div class="about-case__info-box --list">
+                <p class="p-main --p-low uav-result1">1. Полнофункциональная система управления турнирами с поддержкой двух этапов: отборочного и финального</p>
+                <p class="p-main --p-low uav-result2">2. Реализован полный CRUD функционал для управления турниров</p>
+                <p class="p-main --p-low uav-result3">3. Разработан пользовательский интерфейс с навигацией между разделами системы</p>
+                <p class="p-main --p-low uav-result4">4. Интеграция с базой данных для хранения и извлечения турнирных данных</p>
+                <p class="p-main --p-low uav-result5">5. Система успешно используется для проведения турниров внутри колледжа</p>
+            </div>
+        </div>
+        <div class="about-case__info-box info-box--5">
+            <p class="p-main --p-low --p-secondary learned-text">Чему научился</p>
+            <p class="p-main --p-low uav-learned">Научился проектировать и разрабатывать полный цикл веб-приложения от планирования до реализации. Приобрел опыт работы с Java и Spring Boot, проектированием базы данных и разработкой пользовательского интерфейса.</p>
+        </div>
+        <div class="about-case__info-box info-box--6">
+            <p class="p-main --p-low --p-secondary technologies-text">Технологии</p>
+            <div class="about-case__info-box --list">
+                <p class="p-main --p-low">Java, Spring Boot, PostGreSQL, HTML/CSS, JavaScript</p>
+            </div>
+        </div>
+    </div>
+</section>
+<script src="js/opening-back.js?v=1.5"></script>
+<script src="js/translate-case-uav.js?v=2.0"></script>
+</body>
+</html>
