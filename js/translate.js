@@ -157,4 +157,7 @@ function setLanguage() {
     document.querySelectorAll('.achievement6').forEach(item => {
         item.innerHTML = translations[currentLang].achievement6;
     });
+    document.querySelectorAll('.achievement7').forEach(item => {
+        item.innerHTML = translations[currentLang].achievement7;
+    });
 }
