@@ -1,0 +1,553 @@
+/* Design tokens — final layer, loaded after legacy styles. */
+:root {
+    --c-bg: #fcfbf9;
+    --c-surface: #f3f1ed;
+    --c-text: #16171a;
+    --c-text-2: #6b665f;
+    --c-border: #e6e2dc;
+    --c-accent: #b05a36;
+    --c-focus: #b05a36;
+
+    --fs-xs: 13px;
+    --fs-s: 15px;
+    --fs-m: 17px;
+    --fs-l: 22px;
+    --fs-h2: clamp(32px, 4vw, 48px);
+    --fs-h1: clamp(40px, 6.2vw, 84px);
+
+    --s-1: 8px;
+    --s-2: 16px;
+    --s-3: 24px;
+    --s-4: 40px;
+    --s-5: 64px;
+    --s-6: clamp(72px, 10vw, 128px);
+
+    --radius: 8px;
+    --container: 1280px;
+
+    --ui-bg: var(--c-bg);
+    --ui-surface: var(--c-surface);
+    --ui-line: var(--c-border);
+    --ui-ink: var(--c-text);
+    --ui-text: var(--c-text);
+    --ui-muted: var(--c-text-2);
+}
+
+html {
+    scroll-padding-top: 88px;
+}
+body.eleven-page,
+body.case-origin {
+    background: var(--c-bg) !important;
+    color: var(--c-text);
+    -webkit-font-smoothing: antialiased;
+}
+::selection {
+    background: var(--c-text);
+    color: var(--c-bg);
+}
+body.eleven-page :focus-visible,
+body.case-origin :focus-visible {
+    outline: 2px solid var(--c-focus);
+    outline-offset: 3px;
+}
+body.eleven-page a,
+body.eleven-page button,
+body.case-origin a,
+body.case-origin button {
+    cursor: pointer;
+}
+
+.skip-link {
+    position: absolute;
+    left: 16px;
+    top: -100px;
+    z-index: 2000;
+    padding: 8px 12px;
+    background: var(--c-text);
+    color: var(--c-bg) !important;
+    font-size: var(--fs-s);
+}
+.skip-link:focus {
+    top: 12px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    html {
+        scroll-behavior: auto;
+    }
+}
+
+/* ---------- Home ---------- */
+body.eleven-page main {
+    width: min(var(--container), calc(100% - 48px)) !important;
+    margin: 0 auto !important;
+}
+body.eleven-page em {
+    font-style: normal !important;
+    font-weight: inherit !important;
+    color: var(--c-text-2) !important;
+}
+
+/* Hero */
+body.eleven-page .function-hero {
+    color: var(--c-text) !important;
+}
+body.eleven-page .function-hero h1 {
+    font-size: var(--fs-h1) !important;
+    font-weight: 300 !important;
+    line-height: 1.02 !important;
+    letter-spacing: -0.04em !important;
+    color: var(--c-text) !important;
+}
+body.eleven-page .hero-copy {
+    max-width: 520px !important;
+    margin: var(--s-4) 0 var(--s-4) !important;
+    font-size: var(--fs-m) !important;
+    line-height: 1.55 !important;
+    color: var(--c-text-2) !important;
+}
+body.eleven-page .hero-buttons {
+    gap: var(--s-4) !important;
+}
+body.eleven-page .hero-text-link,
+body.eleven-page .project-link {
+    font-size: var(--fs-s) !important;
+    font-weight: 500 !important;
+    color: var(--c-text) !important;
+}
+
+/* Sections */
+body.eleven-page main > .function-section {
+    padding-top: var(--s-6) !important;
+    padding-bottom: 0 !important;
+    border-top: 1px solid var(--c-border) !important;
+    margin-top: 0 !important;
+}
+body.eleven-page main > .function-section:last-child {
+    padding-bottom: var(--s-6) !important;
+}
+body.eleven-page .function-section h2 {
+    font-size: var(--fs-h2) !important;
+    font-weight: 300 !important;
+    line-height: 1.08 !important;
+    letter-spacing: -0.035em !important;
+    color: var(--c-text) !important;
+}
+body.eleven-page .section-intro {
+    margin: 0 !important;
+}
+body.eleven-page .section-description {
+    max-width: 360px !important;
+    margin-top: var(--s-3) !important;
+    font-size: var(--fs-s) !important;
+    color: var(--c-text-2) !important;
+}
+body.eleven-page .projects-heading {
+    margin: 0 0 var(--s-4) !important;
+}
+
+/* Projects: original horizontal rail, card styling only */
+body.eleven-page .project-image--fraud {
+    background-image: url('../assets/projects/antifraud-cover.jpg') !important;
+    background-size: cover !important;
+    background-position: center !important;
+    background-color: #17141f !important;
+}
+body.eleven-page .project-image--go {
+    display: block !important;
+    background-image: url('../assets/projects/godevflow-cover.jpg') !important;
+    background-size: cover !important;
+    background-position: center !important;
+    background-color: #c5c4b6 !important;
+}
+body.eleven-page .project-card--development .project-development-visual {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    padding: 0 !important;
+    border: 1px dashed var(--c-border) !important;
+    background: var(--c-bg) !important;
+}
+body.eleven-page .project-card--development .project-development-visual strong {
+    font-size: var(--fs-l) !important;
+    font-weight: 300 !important;
+    color: var(--c-text-2) !important;
+}
+body.eleven-page .project-card:hover .project-image {
+    opacity: 0.88;
+}
+body.eleven-page .project-meta {
+    display: flex !important;
+    flex-direction: column !important;
+    flex: 1;
+    gap: var(--s-1) !important;
+    padding: var(--s-3) 0 0 !important;
+    background: transparent !important;
+}
+body.eleven-page .project-meta small {
+    font-size: var(--fs-xs) !important;
+    letter-spacing: 0 !important;
+    text-transform: none !important;
+    color: var(--c-text-2) !important;
+}
+body.eleven-page .project-meta h3 {
+    margin: 0 !important;
+    font-size: var(--fs-l) !important;
+    font-weight: 400 !important;
+    line-height: 1.25 !important;
+    letter-spacing: -0.02em !important;
+    color: var(--c-text) !important;
+}
+body.eleven-page .project-meta p {
+    margin: 0 !important;
+    max-width: 380px;
+    font-size: var(--fs-s) !important;
+    line-height: 1.5 !important;
+    color: var(--c-text-2) !important;
+}
+body.eleven-page .project-link {
+    margin-top: auto !important;
+    padding-top: var(--s-2) !important;
+    align-self: flex-start;
+}
+body.eleven-page .project-card {
+    border: 0 !important;
+    border-radius: 0 !important;
+}
+
+/* About & Experience: shared 12-col grid (4 / 8) */
+body.eleven-page .about-section,
+body.eleven-page .experience-section {
+    display: grid !important;
+    grid-template-columns: repeat(12, minmax(0, 1fr)) !important;
+    gap: var(--s-4) var(--s-3) !important;
+    align-items: start !important;
+}
+body.eleven-page .about-section > .section-intro,
+body.eleven-page .experience-section > .section-intro {
+    grid-column: 1 / span 4 !important;
+}
+body.eleven-page .about-grid,
+body.eleven-page .experience-list {
+    grid-column: 5 / -1 !important;
+    width: auto !important;
+}
+body.eleven-page .about-grid {
+    display: grid !important;
+    grid-template-columns: minmax(0, 5fr) minmax(0, 7fr) !important;
+    gap: var(--s-4) !important;
+    align-items: start !important;
+}
+body.eleven-page .portrait-gallery {
+    display: block !important;
+}
+body.eleven-page .portrait-gallery__viewport,
+body.eleven-page .portrait-frame img {
+    border-radius: var(--radius) !important;
+}
+body.eleven-page .portrait-gallery__viewport {
+    aspect-ratio: 4 / 5;
+}
+body.eleven-page .portrait-gallery__track img {
+    aspect-ratio: auto !important;
+    height: 100% !important;
+    object-fit: cover;
+}
+body.eleven-page .portrait-gallery__controls {
+    margin-top: var(--s-2) !important;
+}
+body.eleven-page .about-copy {
+    display: flex;
+    flex-direction: column;
+    gap: var(--s-3);
+}
+body.eleven-page .about-copy p {
+    margin: 0 !important;
+    font-size: var(--fs-m) !important;
+    line-height: 1.6 !important;
+    color: var(--c-text-2) !important;
+}
+body.eleven-page .about-copy p.lead {
+    font-size: var(--fs-l) !important;
+    line-height: 1.4 !important;
+    letter-spacing: -0.015em;
+    color: var(--c-text) !important;
+}
+body.eleven-page .tag-list {
+    display: flex !important;
+    flex-wrap: wrap !important;
+    gap: var(--s-1) !important;
+    margin-top: var(--s-2) !important;
+    padding-top: var(--s-3) !important;
+    border-top: 1px solid var(--c-border);
+}
+body.eleven-page .tag-list i {
+    display: none !important;
+}
+body.eleven-page .tag-list {
+    gap: var(--s-1) var(--s-3) !important;
+}
+body.eleven-page .tag-list span {
+    padding: 0 !important;
+    border: 0 !important;
+    border-radius: 0 !important;
+    background: transparent !important;
+    font-size: var(--fs-s) !important;
+    color: var(--c-text) !important;
+}
+
+body.eleven-page .experience-list details {
+    padding: var(--s-3) 0 !important;
+    border: 0 !important;
+    border-top: 1px solid var(--c-border) !important;
+    background: transparent !important;
+}
+body.eleven-page .experience-list details:last-child {
+    border-bottom: 1px solid var(--c-border) !important;
+}
+body.eleven-page .experience-list summary {
+    display: flex !important;
+    justify-content: space-between !important;
+    align-items: baseline !important;
+    gap: var(--s-2) !important;
+    list-style: none;
+}
+body.eleven-page .experience-list summary::-webkit-details-marker {
+    display: none;
+}
+body.eleven-page .experience-list summary span {
+    font-size: var(--fs-l) !important;
+    font-weight: 400 !important;
+    letter-spacing: -0.02em;
+    color: var(--c-text) !important;
+}
+body.eleven-page .experience-list summary small {
+    flex-shrink: 0;
+    font-size: var(--fs-xs) !important;
+    color: var(--c-text-2) !important;
+    font-variant-numeric: tabular-nums;
+}
+body.eleven-page .experience-list details > div {
+    margin-top: var(--s-2) !important;
+}
+body.eleven-page .experience-lead {
+    margin: 0 0 var(--s-2) !important;
+    color: var(--c-text) !important;
+}
+body.eleven-page .experience-list details ul {
+    margin: 0 !important;
+    padding: 0 !important;
+    list-style: none !important;
+    display: grid;
+    gap: 6px;
+}
+body.eleven-page .experience-list details li {
+    position: relative;
+    padding-left: 18px !important;
+    font-size: var(--fs-s) !important;
+    line-height: 1.55 !important;
+    color: var(--c-text-2) !important;
+}
+body.eleven-page .experience-list details li::before {
+    content: '—';
+    position: absolute;
+    left: 0;
+    color: var(--c-border);
+}
+body.eleven-page .experience-list details li strong {
+    font-weight: 500;
+    color: var(--c-text);
+}
+
+@media (max-width: 900px) {
+    body.eleven-page .about-section,
+    body.eleven-page .experience-section {
+        grid-template-columns: 1fr !important;
+    }
+    body.eleven-page .about-section > .section-intro,
+    body.eleven-page .experience-section > .section-intro,
+    body.eleven-page .about-grid,
+    body.eleven-page .experience-list {
+        grid-column: 1 / -1 !important;
+    }
+}
+@media (max-width: 640px) {
+    body.eleven-page main {
+        width: calc(100% - 32px) !important;
+    }
+    body.eleven-page .about-grid {
+        grid-template-columns: 1fr !important;
+    }
+    body.eleven-page .portrait-gallery__viewport {
+        aspect-ratio: 4 / 3;
+    }
+    body.eleven-page .hero-buttons {
+        gap: var(--s-3) !important;
+    }
+    body.eleven-page .experience-list summary {
+        flex-wrap: wrap;
+    }
+}
+body.eleven-page .project-meta,
+body.eleven-page .project-meta h3,
+body.eleven-page .project-meta p {
+    min-height: 0 !important;
+}
+body.eleven-page .experience-list details li {
+    margin: 0 !important;
+}
+body.eleven-page .projects-section {
+    padding-bottom: var(--s-6) !important;
+}
+
+/* Single source of truth for section order */
+body.eleven-page main > .function-hero { order: 1 !important; }
+body.eleven-page main > .projects-section { order: 2 !important; }
+body.eleven-page main > .about-section { order: 3 !important; }
+body.eleven-page main > .experience-section { order: 4 !important; }
+body.eleven-page main > .function-section:last-child { padding-bottom: 0 !important; }
+body.eleven-page main > .experience-section { padding-bottom: var(--s-6) !important; }
+body.eleven-page .about-section > *,
+body.eleven-page .about-grid > * {
+    min-width: 0;
+    max-width: 100%;
+}
+body.eleven-page .portrait-gallery__viewport {
+    width: 100% !important;
+    overflow: hidden !important;
+}
+
+/* ---------- Case pages ---------- */
+body.case-origin .development-message {
+    max-width: 640px !important;
+    text-align: left !important;
+}
+body.case-origin .development-message > p {
+    max-width: 520px !important;
+    margin: var(--s-3) 0 var(--s-4) !important;
+    padding: 0 !important;
+    font-size: var(--fs-m) !important;
+    line-height: 1.55 !important;
+    color: var(--c-text-2) !important;
+}
+body.case-origin .development-message h2 {
+    font-size: var(--fs-h2) !important;
+    font-weight: 300 !important;
+    letter-spacing: -0.035em;
+}
+body.case-origin .development-message h2 em {
+    font-style: normal !important;
+    color: var(--c-text-2);
+}
+body.case-origin .case-gallery__item,
+body.case-origin .case-gallery__item img,
+body.case-origin .case-video video,
+body.case-origin .case-presentation .presentation-stage {
+    border-radius: var(--radius) !important;
+}
+body.case-origin .about-case__info-box p {
+    color: var(--c-text);
+}
+body.case-origin .about-case__info-box > p.--p-secondary {
+    color: var(--c-text-2) !important;
+}
+body.eleven-page .function-hero h1 {
+    font-size: clamp(40px, 5.2vw, 72px) !important;
+}
+
+/* Projects rail: independent horizontal scroll */
+body.eleven-page .projects-heading {
+    display: flex !important;
+    justify-content: space-between !important;
+    align-items: flex-end !important;
+    gap: var(--s-3);
+}
+body.eleven-page .projects-nav {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+/* Same look as the "About" gallery arrows */
+body.eleven-page .projects-nav__btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 4px;
+    border: 0;
+    border-radius: 0;
+    background: transparent;
+    color: var(--c-text);
+    font: 400 16px/1.5 var(--ui-font);
+    transition: background-color 0.2s ease, opacity 0.2s ease;
+}
+body.eleven-page .projects-nav__btn:hover:not(:disabled) {
+    background: var(--c-border);
+}
+body.eleven-page .projects-nav__btn:disabled {
+    opacity: 0.3;
+    cursor: default;
+}
+body.eleven-page .project-rail {
+    overflow-x: auto !important;
+    overflow-y: hidden !important;
+    scroll-behavior: auto !important;
+    scroll-snap-type: x proximity;
+    overscroll-behavior-x: contain;
+    cursor: grab;
+    user-select: none;
+}
+body.eleven-page .project-rail.is-animating {
+    scroll-snap-type: none !important;
+}
+body.eleven-page .project-rail.is-dragging {
+    cursor: grabbing;
+    scroll-snap-type: none !important;
+}
+body.eleven-page .project-rail.is-dragging .project-card {
+    pointer-events: none;
+}
+body.eleven-page .project-rail .project-card {
+    scroll-snap-align: start;
+}
+body.eleven-page .project-rail img,
+body.eleven-page .project-rail a {
+    -webkit-user-drag: none;
+}
+@media (max-width: 800px) {
+    body.eleven-page .projects-nav {
+        display: none;
+    }
+}
+
+/* Mobile order: experience → projects → about */
+@media (max-width: 800px) {
+    body.eleven-page main > .experience-section { order: 2 !important; }
+    body.eleven-page main > .projects-section { order: 3 !important; }
+    body.eleven-page main > .about-section { order: 4 !important; }
+    body.eleven-page main > .experience-section { padding-bottom: 0 !important; }
+    body.eleven-page main > .about-section { padding-bottom: var(--s-6) !important; }
+}
+
+/* Case header: keep a single row on tablets/laptops (legacy case.css moved it to two rows below 1024px) */
+@media (min-width: 801px) {
+    body.case-origin header.original-case-header {
+        grid-template-columns: repeat(4, minmax(0, 1fr)) !important;
+        grid-template-rows: auto !important;
+        align-items: start !important;
+    }
+    body.case-origin header.original-case-header #name-text,
+    body.case-origin header.original-case-header .back-link,
+    body.case-origin header.original-case-header .contacts-container,
+    body.case-origin header.original-case-header .header-main__actions {
+        grid-row: 1 !important;
+        min-width: 0;
+    }
+    body.case-origin header.original-case-header #name-text { grid-column: 1 !important; }
+    body.case-origin header.original-case-header .back-link { grid-column: 2 !important; }
+    body.case-origin header.original-case-header .contacts-container { grid-column: 3 !important; }
+    body.case-origin header.original-case-header .header-main__actions {
+        grid-column: 4 !important;
+        justify-self: end !important;
+    }
+}

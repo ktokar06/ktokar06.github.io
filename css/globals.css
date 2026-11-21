@@ -1,0 +1,163 @@
+:root {
+    --main-bg-color: #faf9f1;
+    --main-font-color: #2a1d18;
+    --secondary-font-color: #645953;
+    --baba-red: #bc2823;
+    --signal-red: #ea1111;
+    --red-light: #cc5c56;
+    --blush: #f8e2db;
+    --paper-divider: #ede7e2;
+    --white: #fff;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Geist', sans-serif;
+    box-sizing: border-box;
+    cursor: default;
+}
+html {
+    scroll-behavior: smooth;
+}
+body {
+    padding: 24px 24px 0px 24px;
+    background-color: var(--main-bg-color);
+    position: relative;
+}
+a {
+    text-decoration: none;
+}
+ul {
+    list-style: none;
+}
+
+*::-webkit-scrollbar {
+    width: 0px;
+}
+* {
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+}
+
+::selection {
+    background: #fff;
+    color: #000;
+}
+
+.p-main {
+    color: var(--main-font-color);
+    font-variant-numeric: lining-nums tabular-nums;
+    font-feature-settings: 'liga' off;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 150%;
+    letter-spacing: -0.16px;
+}
+.--p-secondary {
+    color: var(--secondary-font-color);
+}
+.--p-low {
+    line-height: 140%;
+}
+.--p-title {
+    font-size: 48px;
+    line-height: 110%;
+    letter-spacing: -1.44px;
+}
+.--p-title-big {
+    font-size: 64px;
+    line-height: 100%;
+    letter-spacing: -1.92px;
+}
+
+.button {
+    display: flex;
+    padding: 4px 2px;
+    align-items: center;
+    gap: 4px;
+    height: auto;
+    word-break: break-all;
+    position: relative;
+}
+
+a.button {
+    cursor: pointer;
+}
+
+a.button > * {
+    cursor: pointer;
+}
+
+.button > img {
+    margin-top: 2px;
+}
+.portfolio-page .header-main .p-main,
+.portfolio-page .header-main .--p-secondary {
+    color: rgba(255, 255, 255, 0.92);
+}
+.portfolio-page .header-main .button {
+    color: var(--baba-red);
+    background: #fff;
+    border-radius: 12px;
+    padding: 10px 14px;
+}
+.portfolio-page .header-main .button::after {
+    display: none;
+}
+
+a.button::after,
+.animated-link::after,
+.case-container .button::after {
+    content: '';
+    position: absolute;
+    transition: width 200ms ease-in;
+    background-color: var(--blush);
+    width: 0;
+    left: 0;
+    height: 100%;
+    z-index: -1;
+}
+
+a.button:hover::after,
+.animated-link:hover::after,
+.case-container .button:hover::after {
+    width: 100%;
+    transition: width 0ms linear 50ms;
+}
+
+.animated-link {
+    position: relative;
+    padding: 4px 2px;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    margin-left: -2px;
+}
+.animated-link > * {
+    cursor: pointer;
+}
+
+.--not-active {
+    cursor: default;
+    padding: 4px 2px;
+    margin-left: -2px;
+}
+.--not-active > * {
+    cursor: default;
+}
+
+.enter-animated {
+    position: absolute;
+    z-index: 3;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background-color: var(--baba-red);
+    width: 100%;
+    height: 100%;
+    transition: background-color 0.5s ease;
+    pointer-events: none;
+}
